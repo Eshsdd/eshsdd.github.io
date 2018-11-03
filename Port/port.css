@@ -158,11 +158,11 @@ body {
 }
 
 /* grid Alignment Webpage*/
-.left-grids{ grid-area: leftmost; }
-.main-grids{ grid-area: main; }
-.header-bar { grid-area: header;}
+#left-grids{ grid-area: leftmost; }
+#main-grids{ grid-area: main; }
+#header-bar { grid-area: header;}
 
-.grid-container {
+#grid-container {
     grid-template-areas:
     'header header'
     'leftmost main '
@@ -174,7 +174,7 @@ body {
       justify-content: start;
   }
 
-.header-bar {
+#header-bar {
     z-index: 1;
     background-color: #736b60;
     height: 12vh;
@@ -182,7 +182,7 @@ body {
     box-shadow: 0px 17px 8px rgba(0, 0, 0, .15);
 }
 
-.header-bar h1 {
+#header-bar h1 {
     font-family: 'Bree Serif', serif;
     font-size: 45px;
     color: #ede7d9;
@@ -193,10 +193,10 @@ body {
 
 /* Start of Left Grid*/
 /*Left Grid Template*/
-.projects-bar { grid-area: project;}
-.color-bar { grid-area: colors;}
+#projects-bar { grid-area: project;}
+#color-bar { grid-area: colors;}
 
-.left-grids{
+#left-grids{
     grid-template-areas:
     'project colors';
     
@@ -205,14 +205,14 @@ body {
 }
 
 /* Pre-bar inside of Left Grids*/
-.pre-bar {
+#pre-bar {
     /* Width is the size I want */
     width: 325px;
     overflow: hidden;
 }
 
 /* Projects-bar inside of Pre-Bar*/
-.projects-bar {
+#projects-bar {
     /* Width is slightly larger and thus hides the scroll Bar. */
     width: 345px;
     background-color: #4b4237;
@@ -223,14 +223,14 @@ body {
 }
 
 /* Project Template*/
-.pro1 { grid-area: pro1;}
-.pro2 { grid-area: pro2;}
-.pro3 { grid-area: pro3;}
-.pro4 { grid-area: pro4;}
-.blank { grid-area: blank;}
+#pro1 { grid-area: pro1;}
+#pro2 { grid-area: pro2;}
+#pro3 { grid-area: pro3;}
+#pro4 { grid-area: pro4;}
+#blank { grid-area: blank;}
 
 /*Pro-folder inside Project-bar */
-.pro-folder {
+#pro-folder {
     grid-template-areas:
     'pro1'
     'pro2'
@@ -247,10 +247,10 @@ body {
 }
 
 /*Pro's inside Pro-folder */
-.pro1,
-.pro2,
-.pro3,
-.pro4 {
+#pro1,
+#pro2,
+#pro3,
+#pro4 {
     background-color: #a49694;
     width: 225px;
     height: 240px;
@@ -259,14 +259,14 @@ body {
 }
 
 /*Blank inside Pro-folder */
-.blank{
+#blank{
     /*Blank so it adds one more grid gap */
     height: 1px;
 }
 
 
 /* Color-bar inside of Left Grids*/
-.color-bar{
+#color-bar{
     background-color: #ff7f11;
     width: 135px;
     padding-bottom: 25px;
@@ -276,13 +276,25 @@ body {
 }
 
 /* bar inside of color-bar*/
-.bar {
+#bar {
     background: #ff9933;
     width: 80px;
     height: 630px;
     border-radius: 30px;
 
     grid-area: 1 / span 1 / 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+
+#Rose, #Beach, #Violet, #Dark, #Light {
+    background: #ffffff;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
 }
 
 /* End of left Grid's*/
@@ -290,11 +302,11 @@ body {
 
 /* Start of Main Grid*/
 /* Main Grid template*/
-.resume-obj { grid-area: resume;}
-.contact-obj { grid-area: contact;}
-.footer-img { grid-area: foot;}
+#resume-obj { grid-area: resume;}
+#contact-obj { grid-area: contact;}
+#footer-img { grid-area: foot;}
 
-.main-grids{
+#main-grids{
     grid-template-areas:
     'resume contact'
     'foot foot';
@@ -305,12 +317,12 @@ body {
 }
 
 /* Resume-obj inside of main-grids*/
-.resume-obj {
+#resume-obj {
     padding-top: 10px;
 }
 
 /*resume inside Resume-obj*/
-.resume {
+#resume {
     background: #ffffff;
     box-shadow: -12px 17px 10px rgba(0, 0, 0, .15);
     width: 375px;
@@ -323,18 +335,18 @@ body {
 }
 
 /* Resume's Image*/
-.resume img {
+#resume img {
     width: 100%;
     border-radius: 10px;
 }
 
 /* contact-obj inside of main-grids*/
-.contact-obj {
+#contact-obj {
     padding-top: 10px;
 }
 
 /* contact inside of Contact-obj*/
-.contact {
+#contact {
     background-color: #ff7f11;
     width: 640px;
     height: 495px;
@@ -342,7 +354,7 @@ body {
 }
 
 /* footer-img inside of main-grids*/
-.footer-img {
+#footer-img {
     background-color: #ff7f11;
     padding: 0;
 }
