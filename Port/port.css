@@ -300,7 +300,7 @@ body {
     'foot foot';
 
     display: grid;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: space-around;
 }
 
