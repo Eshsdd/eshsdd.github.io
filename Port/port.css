@@ -145,10 +145,6 @@ table {
     display: none;
  } 
 
-html,
-body {
-    background: #ff9933;
-}
 
 body {
     font-family: 'Muli', sans-serif;
@@ -164,9 +160,9 @@ body {
 
 #grid-container {
     grid-template-areas:
-    'header header'
-    'leftmost main '
-    'leftmost main';
+    'header header header header header'
+    'leftmost main main main main'
+    'leftmost main main main main';
   
       height: 100vh;
       width: 100vw;
@@ -176,7 +172,6 @@ body {
 
 #header-bar {
     z-index: 1;
-    background-color: #736b60;
     height: 12vh;
     width: 100vw;
     box-shadow: 0px 17px 8px rgba(0, 0, 0, .15);
@@ -185,7 +180,6 @@ body {
 #header-bar h1 {
     font-family: 'Bree Serif', serif;
     font-size: 45px;
-    color: #ede7d9;
     padding: .5rem;
 }
 
@@ -215,7 +209,6 @@ body {
 #projects-bar {
     /* Width is slightly larger and thus hides the scroll Bar. */
     width: 345px;
-    background-color: #4b4237;
     height: 100%;
     max-height: 88vh;
     overflow-y: scroll;
@@ -240,6 +233,7 @@ body {
 
     height: 100%;
     padding-top: 40px;
+    padding-right: 20px;
 
     display: grid;
     justify-content: center;
@@ -251,7 +245,6 @@ body {
 #pro2,
 #pro3,
 #pro4 {
-    background-color: #a49694;
     width: 225px;
     height: 240px;
     padding: 10px;
@@ -267,7 +260,6 @@ body {
 
 /* Color-bar inside of Left Grids*/
 #color-bar{
-    background-color: #ff7f11;
     width: 135px;
     padding-bottom: 25px;
     display: grid;
@@ -277,7 +269,6 @@ body {
 
 /* bar inside of color-bar*/
 #bar {
-    background: #ff9933;
     width: 80px;
     height: 630px;
     border-radius: 30px;
@@ -286,15 +277,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
 }
 
+#bar a {
+    width: 48px;
+    padding: 4px;
+    border-radius: 8px;
+}
 
-#Rose, #Beach, #Violet, #Dark, #Light {
-    background: #ffffff;
-    height: 50px;
-    width: 50px;
-    border-radius: 5px;
+#Rose, 
+#Beach, 
+#Violet, 
+#Dark, 
+#Light {
+    height: 48px;
+    width: 48px;
+    border-radius: 3px;
 }
 
 /* End of left Grid's*/
@@ -323,7 +322,6 @@ body {
 
 /*resume inside Resume-obj*/
 #resume {
-    background: #ffffff;
     box-shadow: -12px 17px 10px rgba(0, 0, 0, .15);
     width: 375px;
     height: 495px;
@@ -347,7 +345,6 @@ body {
 
 /* contact inside of Contact-obj*/
 #contact {
-    background-color: #ff7f11;
     width: 640px;
     height: 495px;
     border-radius: 10px;
@@ -360,3 +357,73 @@ body {
 }
 
 /* End of left Grid's*/
+
+/* All The Colors */
+/* Colors that won't change */
+#Rose{background: #f26d7d;}
+#Beach{background: #0081af;} 
+#Violet{background: #b49fcc;}
+#Dark{background: #282b30;}
+#Light {background: #7e8d85;}
+#Rit{background: #ff7f11;}
+#bar a {background: #ede7d9;}
+
+/* Colors that Can Change */
+html,
+body {background: #ff9933;}
+#header-bar h1 {color: #ede7d9;}
+#header-bar {background-color: #736b60;}
+#projects-bar{background-color: #4b4237;}
+#pro1,
+#pro2,
+#pro3,
+#pro4 {background-color: #a49694;}
+#color-bar{background-color: #ff7f11;}
+#bar {background: #ff9933;}
+#resume {background: #ffffff;}
+#contact {background-color: #ff7f11;}
+
+form {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    /* To see the outline of the form */
+    padding: 1em;
+    border-radius: 1em;
+    color: #4b4237;
+  }
+  
+  form div + div {
+    margin-top: 1em;
+  }
+  
+  input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #4b4237;
+    background-color: #ede7d9;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 3em;
+  }
+  
+  button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: 5px;
+    color: #ff7f11;
+    background-color: #4b4237;
+    border: 0px solid #ede7d9;
+    padding: 7px;
+    border-radius: 5px;
+  }
+
+  /*if the mouse is hovering over the button, change the color*/
+  button:hover {background-color: #ff9933;}
+
+  /*if the mouse clicks the button, move down slightly and darken the shadow*/
+  button:active {
+    transform: translateY(4px);
+  }
