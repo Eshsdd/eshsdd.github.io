@@ -148,7 +148,7 @@ table {
 
 body {
     font-family: 'Muli', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     /* The spacing between lines*/
     line-height: 1.4;
 }
@@ -180,7 +180,7 @@ body {
 #header-bar h1 {
     font-family: 'Bree Serif', serif;
     font-size: 45px;
-    padding: .5rem;
+    padding: .5em;
 }
 
 
@@ -345,10 +345,60 @@ body {
 
 /* contact inside of Contact-obj*/
 #contact {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 1em;
     width: 640px;
     height: 495px;
     border-radius: 10px;
 }
+
+/* Contact Header, border used as a line break */
+#contact h1 {
+    font-size: 30px;
+    border-bottom: 2px solid white;
+}
+
+/* Form Formatting */
+/* Form Inside of Contact */
+form {
+    padding: 1em;
+  }
+  
+  /* Div have a half font size spacing */
+  form div + div {
+    margin-top: .5em;
+  }
+  
+  /* Make the Input areas uniform */
+  input, 
+  textarea {
+    width: 300px;
+    font: 1em sans-serif;
+    box-sizing: border-box;
+    border-width: 1px;
+  }
+
+  /* Setting Text up */
+  label {
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+  }
+  
+/* Sizing up the larger box */
+  textarea {
+    vertical-align: top;
+    height: 3em;
+  }
+  
+  /* Submit this info */
+  button {
+    margin-left: 375px;
+    border-width: 0px;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
 /* footer-img inside of main-grids*/
 #footer-img {
@@ -367,63 +417,25 @@ body {
 #Light {background: #7e8d85;}
 #Rit{background: #ff7f11;}
 #bar a {background: #ede7d9;}
+#resume {background: #ffffff;}
 
 /* Colors that Can Change */
-html,
-body {background: #ff9933;}
+#contact h1 {color: #ffffff;}
 #header-bar h1 {color: #ede7d9;}
-#header-bar {background-color: #736b60;}
+input, 
+textarea {
+  background-color: #ede7d9;
+  border-color: #4b4237;}
 #projects-bar{background-color: #4b4237;}
+button{background-color: #4b4237;}
+form {color: #4b4237;}
 #pro1,
 #pro2,
 #pro3,
 #pro4 {background-color: #a49694;}
-#color-bar{background-color: #ff7f11;}
-#bar {background: #ff9933;}
-#resume {background: #ffffff;}
+#header-bar {background-color: #736b60;}
 #contact {background-color: #ff7f11;}
-
-form {
-    /* Just to center the form on the page */
-    margin: 0 auto;
-    /* To see the outline of the form */
-    padding: 1em;
-    border-radius: 1em;
-    color: #4b4237;
-  }
-  
-  form div + div {
-    margin-top: 1em;
-  }
-  
-  input, textarea {
-    font: 1em sans-serif;
-    width: 300px;
-    box-sizing: border-box;
-    border: 1px solid #4b4237;
-    background-color: #ede7d9;
-  }
-  
-  textarea {
-    vertical-align: top;
-    height: 3em;
-  }
-  
-  button {
-    /* This extra margin represent roughly the same space as the space
-       between the labels and their text fields */
-    margin-left: 5px;
-    color: #ff7f11;
-    background-color: #4b4237;
-    border: 0px solid #ede7d9;
-    padding: 7px;
-    border-radius: 5px;
-  }
-
-  /*if the mouse is hovering over the button, change the color*/
-  button:hover {background-color: #ff9933;}
-
-  /*if the mouse clicks the button, move down slightly and darken the shadow*/
-  button:active {
-    transform: translateY(4px);
-  }
+button {color: #ff7f11;}
+#color-bar{background-color: #ff7f11;}
+html{background: #ff9933;}
+#bar {background: #ff9933;}
