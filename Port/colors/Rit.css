@@ -12,6 +12,7 @@
 
 /* Colors that Can Change */
 #contact h1 {color: #ffffff;}
+#Talking h1 {color: #ffffff;}
 #header-bar h1 {color: #ede7d9;}
 input, 
 textarea {
@@ -27,6 +28,7 @@ form {color: #4b4237;}
 #pro2,
 #pro3,
 #pro4 {background-color: #a49694;}
+#Talking p {color: #a49694;}
 .Pages a:hover {background-color: #a49694;}
 #header-bar {background-color: #736b60;}
 .Pages {background-color: #736b60;}

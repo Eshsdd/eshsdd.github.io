@@ -190,7 +190,7 @@ body {
 #header-bar h1 {
     font-family: 'Bree Serif', serif;
     font-size: 45px;
-    padding: .15em;
+    padding: .05em;
 }
 
 /* Set Icons in a good place */
@@ -255,6 +255,7 @@ body {
 /* contact-obj inside of main-grids*/
 #contact-obj {
     font-size: 2em;
+    
 }
 
 /* contact inside of Contact-obj*/
@@ -262,8 +263,6 @@ body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 1em;
-    width: 60vw;
-    height: 550px;
     border-radius: 10px;
 }
 
@@ -274,7 +273,8 @@ body {
 }
 
 /* Formats the sizing of my about me page */
-#contact p {padding: .5em;}
+#contact p {padding: .5em;
+font-size: 20px}
 
 /* Form Formatting */
 /* Form Inside of Contact */
