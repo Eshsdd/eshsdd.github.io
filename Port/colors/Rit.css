@@ -21,13 +21,18 @@ textarea {
 button{background-color: #4b4237;}
 form {color: #4b4237;}
 #contact p {color: #4b4237;}
+.Pages a {
+    color: #4b4237;}
 #pro1,
 #pro2,
 #pro3,
 #pro4 {background-color: #a49694;}
+.Pages a:hover {background-color: #a49694;}
 #header-bar {background-color: #736b60;}
+.Pages {background-color: #736b60;}
 #contact {background-color: #ff7f11;}
 button {color: #ff7f11;}
+#Hamburger button {border-color: #ff7f11;}
 #color-bar{background-color: #ff7f11;}
 html{background: #ff9933;}
 #bar {background: #ff9933;}
