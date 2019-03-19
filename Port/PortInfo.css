@@ -9,7 +9,7 @@ div,
 span,
 applet,
 object,
-iframe,
+iframe, 
 h1,
 h2,
 h3,
@@ -185,6 +185,7 @@ body {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #header-bar h1 {
@@ -195,12 +196,7 @@ body {
 
 /* Set Icons in a good place */
 #apps {
-    margin-top: 20px; 
-    margin-right: 20px;
-    margin-right: 100px;
-    width: 180px;
     display: flex;
-
 }
 
 /* Format all the Icons */
@@ -224,14 +220,11 @@ body {
 /* Doesn't move my menu icon, looks as if it comes from the header itself */
 .Pages {
     position: absolute;
-    margin-top: 19px;
-    padding-top: 8px;
+    padding-top: 35px;
     display: none;
-    width: 255px;
-    box-shadow: -17px 8px 8px rgba(0, 0, 0, .15);
+    width: 400px;
 
 }
-
 /* Hides Url underline, adjusts text */
 .Pages a {
     text-decoration: none;
@@ -255,6 +248,7 @@ body {
 /* contact-obj inside of main-grids*/
 #contact-obj {
     font-size: 2em;
+    
 }
 
 /* contact inside of Contact-obj*/
@@ -262,9 +256,10 @@ body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 1em;
-    width: 60vw;
-    height: 550px;
     border-radius: 10px;
+    width: 70vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 /* Contact Header, border used as a line break */
@@ -274,7 +269,8 @@ body {
 }
 
 /* Formats the sizing of my about me page */
-#contact p {padding: .5em;}
+#contact p {padding: .5em;
+font-size: 20px}
 
 /* Form Formatting */
 /* Form Inside of Contact */
@@ -327,8 +323,6 @@ form {
         #contact-obj {
             font-size: 30px;
         }
-        #contact {
-            height: 400px;}
 
  }
 
@@ -339,8 +333,6 @@ form {
         #contact-obj {
             font-size: 20px;
         }
-        #contact {
-            height: 400px;}
             #format button {
                margin-left: 39.5vw;}
 
@@ -349,19 +341,22 @@ form {
  @media screen and (max-width: 765px) {
      
     #contact {
-        width: 450px;
-        height: 400px;}
+        width: 450px;}
 
         #format button {
            margin-left: 300px;}
 
-    #apps{
-        display: none;
-    }
+           #apps img{
+            display: none;
+        }
+   
+        #apps {
+            padding-right: 28px ;
+        }
  }
- @media screen and (max-width: 500px) {
+ @media screen and (max-width: 550px) {
     #contact {
-        width: 350px;}
+        width: 450px;}
     input, 
     textarea {
       width: 200px;

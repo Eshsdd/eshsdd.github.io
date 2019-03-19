@@ -160,9 +160,9 @@ body {
 
 #grid-container {
     grid-template-areas:
-    'header'
-    'leftmos'
-    'leftmost';
+    'header header header header header'
+    'leftmost main main main main'
+    'leftmost main main main main';
   
       height: 100vh;
       width: 100vw;
@@ -186,6 +186,7 @@ body {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #header-bar h1 {
@@ -196,12 +197,7 @@ body {
 
 /* Set Icons in a good place */
 #apps {
-    margin-top: 20px; 
-    margin-right: 20px;
-    margin-right: 100px;
-    width: 180px;
     display: flex;
-
 }
 
 /* Format all the Icons */
@@ -225,11 +221,9 @@ body {
 /* Doesn't move my menu icon, looks as if it comes from the header itself */
 .Pages {
     position: absolute;
-    margin-top: 19px;
-    padding-top: 8px;
+    padding-top: 35px;
     display: none;
-    width: 255px;
-    box-shadow: -17px 8px 8px rgba(0, 0, 0, .15);
+    width: 400px;
 
 }
 
@@ -253,36 +247,24 @@ body {
     'project colors';
     
     display: grid;
-    justify-content: flex-end;
+    justify-content: start;
 }
 
 /* Pre-bar inside of Left Grids*/
 #pre-bar {
-    width: auto;
+    /* Width is the size I want */
+    width: 325px;
     overflow: hidden;
 }
 
 /* Projects-bar inside of Pre-Bar*/
 #projects-bar {
     /* Width is slightly larger and thus hides the scroll Bar. */
-    
-    width: 100vw;
-    height: 100vh;
+    width: 345px;
+    height: 100%;
     max-height: 88vh;
+    overflow-y: scroll;
 
-}
-#Talking{
-    width: 500px;
-}
-
-#Talking h1 {
-    font-size: 30px;
-    border-bottom: 2px solid white;
-
-}
-
-#Talking p {
-    padding: 8px;
 }
 
 /* Project Template*/
@@ -295,23 +277,28 @@ body {
 /*Pro-folder inside Project-bar */
 #pro-folder {
     grid-template-areas:
-    'pro1';
+    'pro1'
+    'pro2'
+    'pro3'
+    'pro4'
+    'blank';
 
+    height: 100%;
     padding-top: 40px;
-    padding-left: 20px;
+    padding-right: 20px;
 
     display: grid;
-    justify-content: left;
-    align-content: center;
+    justify-content: center;
     grid-gap: 50px;
 }
 
 /*Pro's inside Pro-folder */
-#pro1, #pro1 img {
-    width: 40vw;
-    height: 40vw;
-    min-width: 400px;
-    min-height: 400px;
+#pro1, #pro1 img,
+#pro2, #pro2 img,
+#pro3, #pro3 img,
+#pro4, #pro4 img {
+    width: 225px;
+    height: 240px;
     border-radius: 20px;
 }
 
@@ -364,6 +351,117 @@ body {
 /* End of left Grid's*/
 
 
+/* Start of Main Grid*/
+/* Main Grid template*/
+#resume-obj { grid-area: resume;}
+#contact-obj { grid-area: contact;}
+#footer-img { grid-area: foot;}
+
+#main-grids{
+    grid-template-areas:
+    'resume contact'
+    'foot foot';
+
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+/* Resume-obj inside of main-grids*/
+#resume-obj {
+    padding-top: 10px;
+}
+
+/*resume inside Resume-obj*/
+#resume {
+    box-shadow: -12px 17px 10px rgba(0, 0, 0, .15);
+    width: 375px;
+    height: 495px;
+    border-radius: 10px;
+
+    /* Grid used to center resume img*/
+    display: grid;
+    align-content: center;
+}
+
+/* Resume's Image*/
+#resume img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* contact-obj inside of main-grids*/
+#contact-obj {
+    padding-top: 10px;
+    margin-right: 8px;
+}
+
+/* contact inside of Contact-obj*/
+#contact {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 640px;
+    height: 495px;
+    border-radius: 10px;
+}
+
+/* Contact Header, border used as a line break */
+#contact h1 {
+    font-size: 30px;
+    border-bottom: 2px solid white;
+}
+
+/* Formats the sizing of my about me page */
+#contact p {padding: .5em;}
+
+/* Form Formatting */
+/* Form Inside of Contact */
+/* Lightly based off the My First Html form @ https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form */
+form {
+    padding: 1em;
+  }
+  
+  /* Div have a half font size spacing */
+  form div + div {
+    margin-top: .5em;
+  }
+  
+  /* Make the Input areas uniform */
+  input, 
+  textarea {
+    width: 300px;
+    font: 1em sans-serif;
+    box-sizing: border-box;
+    border-width: 1px;
+  }
+
+  /* Setting Text up */
+  label {
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+  }
+  
+/* Sizing up the larger box */
+  textarea {
+    vertical-align: top;
+    height: 3em;
+  }
+  
+  /* Submit this info */
+ #format button {
+    margin-left: 375px;
+    border-width: 0px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+/* footer-img inside of main-grids*/
+
+/* End of left Grid's*/
+
+
 @media screen and (max-width: 1510px) {
     #resume-obj {
         display: none;
@@ -391,6 +489,12 @@ body {
         'leftmost'
         'leftmost';
     }
+    
+
+    #header-bar h1{
+        font-size: 35px;
+    }
+    
      #main-grids{
          display: none;
      }
@@ -398,9 +502,6 @@ body {
         justify-content: space-between;
     }
 
-    #header-bar h1{
-        font-size: 35px;
-    }
     #pre-bar {
         /* Width is the size I want */
         width: unset;
@@ -413,7 +514,7 @@ body {
         width: unset;
         height: 100%;
         max-height: 88vh;
-        overflow-y: auto;
+        overflow-y: scroll;
     
     }
     
@@ -425,8 +526,8 @@ body {
         padding-right: 20px;
     
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     #pro1,
@@ -437,14 +538,17 @@ body {
 }
  }
 
- @media screen and (max-width: 520px) {
+ @media screen and (max-width: 550px) {
     #grid-container {
         max-height: 100vh;
     }
-     #apps{
+     #apps img{
          display: none;
      }
-     
+
+     #apps {
+         padding-right: 28px ;
+     }
      #left-grids{
         grid-template-areas:
         'project'
@@ -457,7 +561,7 @@ body {
 
     #color-bar{
         height: 12vh;
-        width: 100vw;
+        width: unset;
         padding: 0px;
         align-content: center;
     }
